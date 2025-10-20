@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Moussa Sabbar</title>
     <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
   </head>
   <body>
     <header>
@@ -31,7 +38,7 @@
     </main>
     <section class="portfolio-grid">
       <div class="card large collaboration">
-        <img src="Portfolio.png" alt="Laptop design" class="card-img" />
+        <img src="images/computer.svg" alt="Laptop design" class="card-img" />
         <div class="card-text">
           <h3>
             I prioritize client collaboration, fostering open communication
@@ -135,6 +142,75 @@
         </div>
       </div>
     </section>
+
+    <section class="testimonials">
+  <h2>What <span>Clients Say</span></h2>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide testimonial-card">
+        <img src="images/client1.jpg" alt="Client photo" class="client-photo" />
+        <p class="quote">
+          “Moussa transformed our web presence with stunning visuals and flawless
+          performance. Truly a pleasure to work with!”
+        </p>
+        <h4 class="client-name">– Sarah Mitchell, Product Manager</h4>
+      </div>
+
+      <div class="swiper-slide testimonial-card">
+        <img src="images/client2.jpg" alt="Client photo" class="client-photo" />
+        <p class="quote">
+          “Great communication, clean code, and innovative solutions.
+          Highly recommend Moussa for any React or Next.js projects.”
+        </p>
+        <h4 class="client-name">– Alexei Ivanov, Startup Founder</h4>
+      </div>
+
+      <div class="swiper-slide testimonial-card">
+        <img src="images/client3.jpg" alt="Client photo" class="client-photo" />
+        <p class="quote">
+          “He understood our needs perfectly and delivered on time.
+          The final product exceeded expectations.”
+        </p>
+        <h4 class="client-name">– Emily Tan, Designer</h4>
+      </div>
+    </div>
+
+    <!-- Pagination and navigation buttons -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+    
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+  });
+</script>
 
     <script src="scripts/script.js"></script>
   </body>

@@ -349,3 +349,94 @@ header {
 .live-link:hover {
   color: #c5a8ff;
 }
+
+
+/* Testimonials Swiper Section */
+.testimonials {
+  max-width: 1200px;
+  margin: 120px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.testimonials h2 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.testimonials h2 span {
+  background: linear-gradient(90deg, #b07aff, #c1a0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.swiper {
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.testimonial-card {
+  background: rgba(15, 18, 30, 0.85);
+  border-radius: 18px;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  background: rgba(25, 28, 45, 0.95);
+}
+
+.client-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid #b07aff;
+}
+
+.quote {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.client-name {
+  font-size: 0.9rem;
+  color: #b399ff;
+  font-weight: 600;
+}
+
+/* Swiper pagination and nav */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #b07aff;
+  transition: color 0.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #c9b0ff;
+}
+
+.swiper-pagination-bullet {
+  background: #b07aff;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonials h2 {
+    font-size: 1.6rem;
+  }
+}
