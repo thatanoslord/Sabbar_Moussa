@@ -525,3 +525,20 @@ header {
   font-size: 0.95rem;
   line-height: 1.5;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience h2 {
+    font-size: 1.7rem;
+  }
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+  .experience-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .exp-icon {
+    margin: 0 0 15px 0;
+  }
+}
