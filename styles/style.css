@@ -506,3 +506,16 @@ header {
   transform: translateY(-5px);
   background: rgba(25, 28, 45, 0.95);
 }
+
+.exp-icon {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.exp-content h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
