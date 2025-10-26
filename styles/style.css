@@ -460,3 +460,20 @@ header {
     font-size: 1.6rem;
   }
 }
+
+/* ===============================
+   Work Experience Section
+==================================*/
+.experience {
+  max-width: 1200px;
+  margin: 120px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.experience h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 60px;
+}
