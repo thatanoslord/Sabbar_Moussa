@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 * {
   margin: 0;
@@ -7,12 +7,12 @@
 }
 
 body {
-background-color: #0b0f1a;
-  background-image: url('grid-pattern (1).png');
+  background-color: #0b0f1a;
+  background-image: url("grid-pattern (1).png");
   background-size: cover;
   background-position: center;
   color: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   text-align: center;
 }
 header {
@@ -164,7 +164,7 @@ header {
   justify-content: flex-start;
   background: linear-gradient(145deg, #2e1f5e, #0d0f20);
   position: relative;
-  min-height:580px ;
+  min-height: 580px;
 }
 
 .card-img {
@@ -194,13 +194,13 @@ header {
   margin-top: 15px;
   justify-content: center;
 }
-.card.timezone{
+.card.timezone {
   padding: 0%;
   background: none;
   box-shadow: none;
 }
 
-.time-zone{
+.time-zone {
   border-radius: 16px;
   background-size: cover;
   display: flex;
@@ -370,7 +370,6 @@ header {
   color: #c5a8ff;
 }
 
-
 /* Testimonials Swiper Section */
 .testimonials {
   max-width: 1200px;
@@ -395,7 +394,11 @@ header {
   width: 100%;
   padding-bottom: 60px;
 }
-
+.swiper-slide.testimonial-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .testimonial-card {
   background: rgba(15, 18, 30, 0.85);
   border-radius: 18px;
@@ -403,6 +406,10 @@ header {
   text-align: left;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, background 0.3s ease;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .testimonial-card:hover {
