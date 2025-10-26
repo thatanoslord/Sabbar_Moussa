@@ -490,3 +490,19 @@ header {
   gap: 25px;
   justify-content: center;
 }
+
+.experience-card {
+  display: flex;
+  align-items: center;
+  background: rgba(15, 18, 30, 0.85);
+  border-radius: 20px;
+  padding: 25px;
+  text-align: left;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  background: rgba(25, 28, 45, 0.95);
+}
