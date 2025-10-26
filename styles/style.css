@@ -477,3 +477,16 @@ header {
   color: #fff;
   margin-bottom: 60px;
 }
+
+.experience h2 span {
+  background: linear-gradient(90deg, #b07aff, #c1a0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
