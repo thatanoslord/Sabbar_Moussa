@@ -519,3 +519,9 @@ header {
   color: #fff;
   margin-bottom: 8px;
 }
+
+.exp-content p {
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
