@@ -576,3 +576,14 @@ header {
   font-size: 1.1rem;
   color: #ccc;
 }
+.contact-btn {
+  margin-top: 40px;
+  padding: 16px 36px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
