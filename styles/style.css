@@ -591,3 +591,20 @@ header {
   background: rgba(255,255,255,0.15);
   transform: translateY(-3px);
 }
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  background-color: transparent;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.footer .social-icons {
+  display: flex;
+  gap: 16px;
+}
