@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -552,10 +553,22 @@ header {
 
 /* CONTACT SECTION */
 
-.contact-section {
+/* .contact-section {
   text-align: center;
   padding: 100px 20px;
   background: radial-gradient(ellipse at center, rgba(255,255,255,0.03) 0%, transparent 70%);
+  color: #fff;
+} */
+
+.contact-section {
+  text-align: center;
+  padding: 100px 20px;
+  background-image: 
+    url("../images/pattern.svg"), /* your pattern image */
+    radial-gradient(ellipse at center, rgba(255,255,255,0.03) 0%, transparent 70%);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;  /* pattern repeats, gradient covers */
+  background-position: top left, center;
   color: #fff;
 }
 
@@ -618,6 +631,7 @@ header {
   border-radius: 12px;
   background: rgba(255,255,255,0.05);
   transition: background 0.3s;
+  color: aliceblue;
 }
 
 .footer .social-icons a:hover {
