@@ -1,0 +1,13 @@
+
+.contact-body {
+  background: #050812;
+  color: #fff;
+  font-family: Inter, sans-serif;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 120px auto;
+  padding: 20px;
+  text-align: center;
+}
