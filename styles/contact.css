@@ -25,3 +25,17 @@
   font-size: 1.1rem;
   color: #cfcfcf;
 }
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #b5b5b5;
+}
