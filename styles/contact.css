@@ -11,3 +11,17 @@
   padding: 20px;
   text-align: center;
 }
+
+.contact-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #b388ff, #9f7aea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-container p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #cfcfcf;
+}
