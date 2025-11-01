@@ -24,44 +24,48 @@
       </nav>
     </header>
 
-    <section class="contact-container">
-      <h1>Let's work together</h1>
-      <p>
-        Have a project in mind? Feel free to reach out by filling the form below
-        👇
-      </p>
-      <form form class="contact-form" action="" method="POST">
-        <div class="form-group">
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your full name"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="you@example.com"
-            required
-          />
+    <section class="contact-wrapper">
+  <div class="contact-header">
+    <h1>Get in <span>touch</span></h1>
+    <p>Reach out, and let's create a universe of possibilities together!</p>
+  </div>
+
+  <div class="contact-grid">
+    
+    <!-- Form Area -->
+    <div class="contact-card">
+      <h2>Let’s connect constellations</h2>
+      <p>Let’s align our constellations! Reach out and let the magic of collaboration illuminate our skies.</p>
+
+      <form class="contact-form">
+        <div class="form-row">
+          <input type="text" placeholder="Last Name" required>
+          <input type="text" placeholder="First Name" required>
         </div>
 
-        <div class="form-group">
-          <label>Message</label>
-          <textarea
-            name="message"
-            rows="5"
-            placeholder="Tell me about your project..."
-            required
-          ></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Send Message ↗</button>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Phone Number">
+        <textarea placeholder="Message" rows="5" required></textarea>
+
+        <button type="submit" class="moon-btn">
+          Send it to the moon 🚀
+        </button>
       </form>
-    </section>
+    </div>
+        <!-- Image Panel -->
+    <div class="contact-image-card">
+      <img src="images/astronaut.svg" alt="astronaut floating in space"/>
+      <p class="quote">
+        “Two lunar months revealed Earth’s fragile beauty against vast silence, transforming my view of our place in the universe.”
+        <br><span>Irinel Traista</span>
+      </p>
+    </div>
+
+
+
+  </div>
+</section>
+
 
     <!-- Footer -->
 <footer class="footer">
