@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,21 +14,52 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/contact.css">
-  <title>Contact – Moussa Sabbar</title>
-</head>
-<body class="contact-body">
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <title>Contact – Moussa Sabbar</title>
+  </head>
+  <body class="contact-body">
     <section class="form-section">
       <form class="formulaire">
-         <div class="paragraph">
+        <div class="paragraph">
           <h2>Let’s connect constellations</h2>
           <p>
             Let's align our constellations! Reach out and let the magic of
             collaboration illuminate our skies.
           </p>
         </div>
+        <!-- Form inputs -->
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Full Name"
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Phone Number"
+          required
+        />
+        <textarea
+          id="message"
+          placeholder="Message"
+          name="message"
+          rows="4"
+          class="message-input"
+          required
+        ></textarea>
+        <button type="submit" class="wrapper">send message</button>
       </form>
     </section>
-</body>
+  </body>
 </html>
