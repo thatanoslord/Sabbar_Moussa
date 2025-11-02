@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  color: white;
+}
+.contact-body {
+  background-image: url("Contact_Form.svg");
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+.form-section {
+  padding: 20px;
+  max-width: 75%;
+  width: 1092px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
