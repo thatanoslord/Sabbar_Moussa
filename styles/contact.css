@@ -11,6 +11,61 @@
   justify-content: center;
   padding: 24px;
 }
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  position: absolute;
+  top: 30px;
+  background: rgba(20, 25, 40, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 12px 30px;
+}
+
+/* Navbar expanded on scroll */
+.navbar-expanded {
+  display: flex;
+  justify-content: center;
+  top: 0;
+  width: 100%;
+  background: rgba(20, 25, 40, 0.95);
+  backdrop-filter: blur(15px);
+  border-radius: 0;
+  padding: 16px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #fff;
+}
+
+.navbar .active {
+  color: #b399ff;
+  border-bottom: 2px solid #b399ff;
+  padding-bottom: 4px;
+}
+
 .form-section {
   padding: 20px;
   max-width: 75%;
