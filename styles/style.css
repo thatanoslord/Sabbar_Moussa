@@ -8,13 +8,16 @@
 }
 
 body {
-  background-color: #0b0f1a;
-  background-image: url("grid-pattern (1).png");
-  background-size: cover;
+  background-image: url("../images/Contact_Form.svg");
+  background-size: fill;
   background-position: center;
   color: #fff;
   font-family: "Inter", sans-serif;
   text-align: center;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
 }
 header {
   position: fixed;
@@ -79,7 +82,7 @@ header {
   width: 100vw;
 
   padding: 0 20px;
-  padding-top: 120px; 
+  padding-top: 120px;
   min-height: 100vh;
 }
 
@@ -203,13 +206,13 @@ header {
   flex-flow: column;
   gap: 25px;
 }
-.card.tech-stack{
+.card.tech-stack {
   padding: 0;
 }
-.card.tech-stack img{
-    width: 100%;
+.card.tech-stack img {
+  width: 100%;
   height: 100%;
-  object-fit: cover;  /* 🔥 makes it fill the box */
+  object-fit: cover; /* 🔥 makes it fill the box */
   object-position: center;
 }
 .time-zone {
@@ -574,11 +577,15 @@ header {
 .contact-section {
   text-align: center;
   padding: 100px 20px;
-  background-image: 
-    url("../images/pattern.svg"), /* your pattern image */
-    radial-gradient(ellipse at center, rgba(255,255,255,0.03) 0%, transparent 70%);
+  background-image: url("../images/pattern.svg"),
+    /* your pattern image */
+      radial-gradient(
+        ellipse at center,
+        rgba(255, 255, 255, 0.03) 0%,
+        transparent 70%
+      );
   background-repeat: repeat, no-repeat;
-  background-size: auto, cover;  /* pattern repeats, gradient covers */
+  background-size: auto, cover; /* pattern repeats, gradient covers */
   background-position: top left, center;
   color: #fff;
 }
@@ -604,7 +611,7 @@ header {
   margin-top: 40px;
   padding: 16px 36px;
   border: none;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   color: #fff;
   font-size: 1.1rem;
   border-radius: 12px;
@@ -612,18 +619,22 @@ header {
   transition: all 0.3s ease;
 }
 .contact-btn:hover {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   transform: translateY(-3px);
 }
 
 /* FOOTER */
+
 .footer {
+   width: 100%;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 80px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../images/footer-bg.svg");
   color: #ccc;
   font-size: 0.95rem;
 }
@@ -640,13 +651,13 @@ header {
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   transition: background 0.3s;
   color: aliceblue;
 }
 
 .footer .social-icons a:hover {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .footer img {
