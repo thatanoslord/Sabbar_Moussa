@@ -66,16 +66,6 @@ header {
 
 }
 
-/* .navbar a:hover {
-  color: #fff;
-} */
-
-/* .navbar .nav-link.active {
-  color: #b399ff;
-  border-bottom: 2px solid #b399ff;
-  padding-bottom: 4px;
-}  */
-  /* Hover */
 .navbar a:hover {
   color: #6c63ff; /* choose any color you like */
 }
@@ -679,4 +669,18 @@ header {
   width: 18px;
   height: 18px;
   filter: invert(1);
+}
+
+/* responsive thing  */
+
+@media (max-width: 768px){
+  .navbar{
+        padding: 12px 0;
+        width:100%;
+  }
+  .navbar ul{
+    gap: 15px;
+    padding: 10px;
+  }
+  
 }
