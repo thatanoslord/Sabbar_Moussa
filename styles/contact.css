@@ -69,8 +69,8 @@ header {
 
 /* formulaire section */
 .form-section {
-  background: linear-gradient(#212121, #212121) padding-box,
-    linear-gradient(137deg, transparent 47%, #e81cff, #40c9ff) border-box;
+  background: linear-gradient(#21212180, #21212180) padding-box,
+    linear-gradient(137deg, transparent 47%, #e81cff4f, #40c9ff5e) border-box;
   border: 1.5px solid transparent;
   padding: 20px;
   max-width: 75%;
@@ -132,7 +132,7 @@ header {
   width: 100%;
   height: 100px;
 
-  color: black;
+  color: white;
   padding: 10px;
 }
 
@@ -316,12 +316,10 @@ header {
   }
 }
 
-
-
 /* FOOTER */
 
 .footer {
-   width: 100%;
+  width: 100%;
   height: 100px;
   display: flex;
   justify-content: space-between;
@@ -360,5 +358,16 @@ header {
   height: 18px;
   filter: invert(1);
 }
+/* hidden picture */
+@media (max-width: 768px) {
+  .form-section {
+    grid-template-columns: 1fr; /* One column only */
+  }
 
-
+  .quote  {
+    display: none;
+  }
+  .formulaire{
+    width: 100%;
+  }
+}
