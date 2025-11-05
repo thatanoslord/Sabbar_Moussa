@@ -587,16 +587,11 @@ header {
 
 /* CONTACT SECTION */
 
-/* .contact-section {
-  text-align: center;
-  padding: 100px 20px;
-  background: radial-gradient(ellipse at center, rgba(255,255,255,0.03) 0%, transparent 70%);
-  color: #fff;
-} */
+
 
 .contact-section {
   text-align: center;
-  padding: 100px 20px;
+  padding:20px 20px 80px ;
   background-image: url("../images/pattern.svg"),
     /* your pattern image */
       radial-gradient(
@@ -685,4 +680,3 @@ header {
   height: 18px;
   filter: invert(1);
 }
-
