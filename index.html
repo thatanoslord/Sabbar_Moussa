@@ -23,15 +23,16 @@
     <header>
       <nav class="navbar">
         <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#" class="active">Projects</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#portfolio-grid" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="hero">
+    <section class="hero" id="hero">
       <p class="subtitle">DYNAMIC WEB MAGIC WITH NEXT.JS</p>
       <h1 class="headline">
         Transforming Concepts into Seamless <br>
@@ -40,9 +41,9 @@
       <p class="intro">
         Hi! I'm Moussa Sabbar, a ReactJs Developer based in Morocco.
       </p>
-      <button class="cta">See my work <span class="arrow">↗</span></button>
-    </main>
-    <section class="portfolio-grid">
+      <button onclick="location.href='#projects'" class="cta">See my work <span class="arrow">↗</span></button>
+    </section>
+    <section class="portfolio-grid" id="portfolio-grid">
       <div class="card large collaboration">
         <img src="images/computer.svg" alt="Laptop design" class="card-img" />
         <div class="card-text">
@@ -53,10 +54,10 @@
       </div>
       <div class="card timezone">
         <div class="time-zone">
-         <img src="/icons/map.svg" alt="">
+         <!-- <img src="/icons/map.svg" alt=""> -->
         </div>
         <div class="card tech-stack">
-          <img src="/icons/box.svg" alt="">
+          <!-- <img src="/icons/box.svg" alt=""> -->
       </div>
       </div>
       
@@ -74,7 +75,7 @@
         <button class="copy-btn">📋 Copy my email address</button>
       </div>
     </section>
-    <section class="recent-projects">
+    <section class="recent-projects" id="projects">
       <h2>A small selection of <span>recent projects</span></h2>
       <div class="projects-grid">
         <div class="project-card">
@@ -139,7 +140,7 @@
       </div>
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
   <h2>What <span>Clients Say</span></h2>
 
   <div class="swiper">
@@ -170,12 +171,27 @@
         </p>
         <h4 class="client-name">– Emily Tan, Designer</h4>
       </div>
+
+       <div class="swiper-slide testimonial-card">
+        <img src="images/person.svg" alt="Client photo" class="client-photo" />
+        <p class="quote">
+          “Great communication, clean code, and innovative solutions.
+          Highly recommend Moussa for any React  projects.”
+        </p>
+        <h4 class="client-name">– Alexei Ivanov, Startup Founder</h4>
+      </div>
+       <div class="swiper-slide testimonial-card">
+        <img src="images/person.svg" alt="Client photo" class="client-photo" />
+        <p class="quote">
+          “Great communication, clean code, and innovative solutions.
+          Highly recommend Moussa for any React  projects.”
+        </p>
+        <h4 class="client-name">– Alexei Ivanov, Startup Founder</h4>
+      </div>
     </div>
 
     <!-- Pagination and navigation buttons -->
     <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
   </div>
 </section>
 

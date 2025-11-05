@@ -62,16 +62,32 @@ header {
   font-weight: 500;
   transition: color 0.3s;
 }
+.logo{
 
-.navbar a:hover {
-  color: #fff;
 }
 
-.navbar .active {
+/* .navbar a:hover {
+  color: #fff;
+} */
+
+/* .navbar .nav-link.active {
   color: #b399ff;
   border-bottom: 2px solid #b399ff;
   padding-bottom: 4px;
+}  */
+  /* Hover */
+.navbar a:hover {
+  color: #6c63ff; /* choose any color you like */
 }
+
+/* Active Link */
+.navbar a.active {
+  color: #6c63ff;
+  border-bottom: 2px solid #6c63ff;
+  padding-bottom: 2px;
+}
+
+
 
 .hero {
   display: flex;
@@ -331,6 +347,10 @@ header {
   text-align: left;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease, background 0.3s ease;
+  display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    justify-content: space-between;
 }
 
 .project-card:hover {
@@ -665,3 +685,4 @@ header {
   height: 18px;
   filter: invert(1);
 }
+
