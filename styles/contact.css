@@ -401,7 +401,7 @@ header {
   .nav-menu {
     position: fixed;
     left: -1000px;
-    top: 80px;
+    top: 40px;
     flex-direction: column;
     background: rgba(20, 25, 40, 0.98);
     backdrop-filter: blur(15px);

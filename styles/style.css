@@ -49,8 +49,8 @@ header {
   top: 0;
   width: 100%;
   max-width: 100%;
-  background: rgba(20, 25, 40, 0.95);
-  backdrop-filter: blur(15px);
+  /* background: rgba(20, 25, 40, 0.95); */
+  backdrop-filter: blur(3px);
   border-radius: 0;
   padding: 16px 0;
   transition: all 0.3s ease;
@@ -754,7 +754,7 @@ header {
   .nav-menu {
     position: fixed;
     left: -1000px;
-    top: 80px;
+    top: 40px;
     flex-direction: column;
     background: rgba(20, 25, 40, 0.98);
     backdrop-filter: blur(15px);
