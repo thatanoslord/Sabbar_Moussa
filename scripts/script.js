@@ -70,19 +70,34 @@ const navLinks = document.querySelectorAll(".nav-link");
 window.addEventListener("scroll", () => {
   let current = "";
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100; 
-    const sectionHeight = section.clientHeight;
+  // Get current scroll position
+  const scrollPosition =
+    window.pageYOffset || document.documentElement.scrollTop;
 
-    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-      current = section.getAttribute("id");
-    }
-  });
+  const isAtBottom =
+    window.innerHeight + scrollPosition >=
+    document.documentElement.scrollHeight - 50;
 
-  navLinks.forEach(link => {
+  if (isAtBottom) {
+    const lastSection = sections[sections.length - 1];
+    current = lastSection.getAttribute("id");
+  } else {
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 150;
+      const sectionHeight = section.clientHeight;
+
+      if (
+        scrollPosition >= sectionTop &&
+        scrollPosition < sectionTop + sectionHeight
+      ) {
+        current = section.getAttribute("id");
+      }
+    });
+  }
+
+  navLinks.forEach((link) => {
     link.classList.remove("active");
 
-    // Only add active class if current has a value and matches the link
     if (current && link.getAttribute("href").includes(current)) {
       link.classList.add("active");
     }
