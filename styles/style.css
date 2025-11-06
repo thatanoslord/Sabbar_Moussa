@@ -127,11 +127,7 @@ header {
 
 
 /* Active Link */
-/* .navbar a.active {
-  color: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 173, 199, 1) 50%, rgba(91, 83, 237, 1) 100%);
-  border-bottom: 2px solid linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 173, 199, 1) 50%, rgba(91, 83, 237, 1) 100%);
-  padding-bottom: 2px;
-} */
+
 
 .navbar a.active {
   position: relative;
@@ -150,7 +146,13 @@ header {
   background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 173, 199, 1) 50%, rgba(91, 83, 237, 1) 100%);
   border-radius: 2px;
 }
+/* .navbar .active {
+  color: #b399ff;
+  border-bottom: 2px solid #b399ff;
+  padding-bottom: 4px;
+} */
 
+/* HERO SECTION */
 .hero {
   display: flex;
   flex-flow: column;
