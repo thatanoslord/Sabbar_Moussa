@@ -445,6 +445,7 @@ header {
   }
 
   .nav-menu.active {
+    align-items: center;
     left: 0;
   }
 

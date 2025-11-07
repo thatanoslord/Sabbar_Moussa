@@ -99,7 +99,7 @@ header {
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 30px;
+  /* gap: 30px; */
 }
 
 .navbar a {
@@ -339,6 +339,11 @@ header {
 }
 
 /* Passion & project cards */
+.card.passion{
+  background-image: url("../images/enthusiast.svg");
+  background-size: cover;
+  background-position: center;
+}
 .passion h3,
 .project h3 {
   font-size: 1rem;
@@ -799,6 +804,7 @@ header {
   }
 
   .nav-menu.active {
+    align-items: center;
     left: 0;
   }
 
@@ -816,3 +822,5 @@ header {
     padding-top: 100px;
   }
 }
+
+/**/
