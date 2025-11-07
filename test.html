@@ -1,276 +1,50 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Navbar</title>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/test.css" />
 
-    body {
-      background: #0a0a0f;
-      font-family: 'Inter', sans-serif;
-      color: #fff;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-      display: flex;
-      justify-content: center;
-    }
-
-    .navbar {
-      position: absolute;
-      top: 30px;
-      background: rgba(20, 25, 40, 0.7);
-      backdrop-filter: blur(10px);
-      border-radius: 12px;
-      padding: 12px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: auto;
-      max-width: 95%;
-    }
-
-    .navbar-expanded {
-      top: 0;
-      width: 100%;
-      max-width: 100%;
-      background: rgba(20, 25, 40, 0.95);
-      backdrop-filter: blur(15px);
-      border-radius: 0;
-      padding: 16px 30px;
-      transition: all 0.3s ease;
-    }
-
-    /* Logo */
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #fff;
-      text-decoration: none;
-      display: none; /* Hidden on desktop by default */
-    }
-
-    .logo span {
-      background: linear-gradient(90deg, #b07aff, #c1a0ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    /* Burger Menu */
-    .burger-menu {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-    }
-
-    .burger-menu span {
-      width: 25px;
-      height: 3px;
-      background: #fff;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-
-    .burger-menu.active span:nth-child(1) {
-      transform: rotate(45deg) translate(8px, 8px);
-    }
-
-    .burger-menu.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .burger-menu.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -7px);
-    }
-
-    /* Nav Menu */
-    .nav-menu {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-
-    .nav-menu a {
-      text-decoration: none;
-      color: #ccc;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .nav-menu a:hover {
-      color: #6c63ff;
-    }
-
-    .nav-menu a.active {
-      color: #6c63ff;
-      border-bottom: 2px solid #6c63ff;
-      padding-bottom: 2px;
-    }
-
-    /* Mobile Responsive */
-    @media (max-width: 768px) {
-      .navbar {
-        width: 90%;
-        padding: 12px 20px;
-      }
-
-      .navbar-expanded {
-        width: 100%;
-        padding: 16px 20px;
-      }
-
-      .logo {
-        display: block; /* Show logo on mobile */
-      }
-
-      .burger-menu {
-        display: flex; /* Show burger menu on mobile */
-      }
-
-      .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background: rgba(20, 25, 40, 0.98);
-        backdrop-filter: blur(15px);
-        width: 100%;
-        text-align: center;
-        transition: left 0.3s ease;
-        padding: 30px 0;
-        gap: 0;
-        border-radius: 0 0 12px 12px;
-      }
-
-      .nav-menu.active {
-        left: 0;
-      }
-
-      .nav-menu li {
-        padding: 15px 0;
-      }
-
-      .nav-menu a {
-        font-size: 1.1rem;
-      }
-    }
-
-    /* Demo Content */
-    .demo-content {
-      margin-top: 150px;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    section {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <nav class="navbar">
-      <a href="#" class="logo">M<span>S</span></a>
-      
-      <ul class="nav-menu">
-        <li><a href="#hero" class="nav-link active">Home</a></li>
-        <li><a href="#portfolio-grid" class="nav-link">About</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-
-      <div class="burger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child1">
+        <div class="grandchild left-box">
+          <p>
+            Tech enthusiast with <br />
+            a passion for development.
+          </p>
+        </div>
+        <div class="grandchild right-box">
+          <p>Do you want to start a project together?</p>
+          <div
+            class="glowing-box glowing-box-active"
+            style="--animation-speed: 2s"
+          >
+            <div class="glowing-box-animations">
+              <div class="glowing-box-glow"></div>
+              <div class="glowing-box-stars-masker">
+                <div class="glowing-box-stars"></div>
+              </div>
+            </div>
+            <div class="glowing-box-borders-masker">
+              <div class="glowing-box-borders"></div>
+            </div>
+            <button class="glowing-box-button">
+              <span class="glowing-span">Minimalist Glow Button</span>
+            </button>
+          </div>
+        </div>
       </div>
-    </nav>
-  </header>
 
-  <div class="demo-content">
-    <section id="hero">Hero Section</section>
-    <section id="portfolio-grid">About Section</section>
-    <section id="projects">Projects Section</section>
-    <section id="testimonials">Testimonials Section</section>
-    <section id="contact">Contact Section</section>
-  </div>
-
-  <script>
-    // Burger Menu Toggle
-    const burgerMenu = document.querySelector('.burger-menu');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    burgerMenu.addEventListener('click', () => {
-      burgerMenu.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-
-    // Close menu when clicking on a link
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        burgerMenu.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-
-    // Navbar scroll behavior
-    window.addEventListener('scroll', () => {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 1) {
-        navbar.classList.add('navbar-expanded');
-      } else {
-        navbar.classList.remove('navbar-expanded');
-      }
-    });
-
-    // Nav link active state on scroll
-    const sections = document.querySelectorAll('section');
-
-    window.addEventListener('scroll', () => {
-      let current = '';
-      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-      const isAtBottom = (window.innerHeight + scrollPosition) >= document.documentElement.scrollHeight - 50;
-
-      if (isAtBottom) {
-        const lastSection = sections[sections.length - 1];
-        current = lastSection.getAttribute('id');
-      } else {
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop - 150;
-          const sectionHeight = section.clientHeight;
-
-          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-          }
-        });
-      }
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (current && link.getAttribute('href').includes(current)) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
-</body>
+      <div class="child2">
+        <p class="subtitle">THE INSIDE SCOOP</p>
+        <h2>
+          Currently building a <br />
+          JS Animation library
+        </h2>
+      </div>
+    </div>
+  </body>
 </html>
