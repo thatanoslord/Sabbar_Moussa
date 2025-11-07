@@ -145,11 +145,6 @@ header {
   background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 173, 199, 1) 50%, rgba(91, 83, 237, 1) 100%);
   border-radius: 2px;
 }
-/* .navbar .active {
-  color: #b399ff;
-  border-bottom: 2px solid #b399ff;
-  padding-bottom: 4px;
-} */
 
 /* HERO SECTION */
 .hero {
@@ -161,7 +156,6 @@ header {
   width: 100vw;
 
   padding: 0 20px;
-  padding-top: 120px;
   min-height: 100vh;
 }
 
@@ -220,7 +214,7 @@ header {
   gap: 25px;
   max-width: 1200px;
   margin: 80px auto;
-  padding: 0 20px;
+  padding: 80px 20px;
 }
 
 .card {
@@ -353,7 +347,7 @@ header {
   max-width: 1200px;
   margin: 120px auto;
   text-align: center;
-  padding: 0 20px;
+  padding: 80px 20px;
 }
 .recent-projects h2 {
   font-size: 1.8rem;
@@ -442,7 +436,7 @@ header {
   max-width: 1200px;
   margin: 120px auto;
   text-align: center;
-  padding: 0 20px;
+  padding: 80px 20px;
 }
 
 .testimonials h2 {
