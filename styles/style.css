@@ -700,12 +700,31 @@ header {
   align-items: center;
   gap: 20px;
 }
+   .footer-links a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
 
-/* Left links */
-.footer-links {
-  display: flex;
-  gap: 25px;
-}
+      .footer-links a:hover {
+        color: #fff;
+      }
+
+ /* Social icons */
+      .footer-social {
+        display: flex;
+        gap: 20px;
+      }
+
+      .footer-social a {
+        color: #ccc;
+        font-size: 18px;
+        transition: color 0.3s ease;
+      }
+
+      .footer-social a:hover {
+        color: #fff;
+      }
 
 .footer .social-icons a:hover {
   background: rgba(255, 255, 255, 0.15);
