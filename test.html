@@ -1,50 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/test.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Grid Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="parent">
-      <div class="child1">
-        <div class="grandchild left-box">
-          <p>
-            Tech enthusiast with <br />
-            a passion for development.
-          </p>
-        </div>
-        <div class="grandchild right-box">
-          <p>Do you want to start a project together?</p>
-          <div
-            class="glowing-box glowing-box-active"
-            style="--animation-speed: 2s"
-          >
-            <div class="glowing-box-animations">
-              <div class="glowing-box-glow"></div>
-              <div class="glowing-box-stars-masker">
-                <div class="glowing-box-stars"></div>
-              </div>
-            </div>
-            <div class="glowing-box-borders-masker">
-              <div class="glowing-box-borders"></div>
-            </div>
-            <button class="glowing-box-button">
-              <span class="glowing-span">Minimalist Glow Button</span>
-            </button>
-          </div>
-        </div>
-      </div>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0a0a1f;
+            color: white;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
 
-      <div class="child2">
-        <p class="subtitle">THE INSIDE SCOOP</p>
-        <h2>
-          Currently building a <br />
-          JS Animation library
-        </h2>
-      </div>
-    </div>
-  </body>
+        .portfolio-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card.large {
+            grid-row: span 2;
+            background-image: url("../Images/computer.svg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Collaboration Card */
+        .collaboration {
+            background: linear-gradient(135deg, #2d1b69 0%, #1a1040 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-img {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .card-text h3 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-top: 20px;
+        }
+
+        /* Decorative elements for collaboration card */
+        .collaboration::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            width: 120px;
+            height: 40px;
+            background: rgba(167, 139, 250, 0.3);
+            border-radius: 20px;
+        }
+
+        .collaboration::after {
+            content: '';
+            position: absolute;
+            bottom: 120px;
+            right: 40px;
+            width: 140px;
+            height: 40px;
+            background: rgba(250, 204, 21, 0.8);
+            border-radius: 20px;
+        }
+
+        /* Timezone Card */
+        .timezone {
+            background: linear-gradient(135deg, #1a1a3e 0%, #0f0f2e 100%);
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 32px;
+        }
+
+        .time-zone {
+            flex: 1;
+            background-image: url("../images/map.svg");
+            background-position: center;
+            background-size: cover;
+            border-radius: 16px;
+            padding: 32px;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .time-zone h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .timezone-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .timezone-tag {
+            padding: 8px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* World map dots */
+        .map-dots {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.3;
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Tech Stack Card */
+        .tech-stack {
+            flex: 1;
+            background: rgba(30, 30, 60, 0.5);
+            border-radius: 16px;
+            padding: 32px;
+            backdrop-filter: blur(10px);
+        }
+
+        .tech-stack h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .tech-stack p {
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tech-tag {
+            padding: 10px 24px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .tech-tag:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card.large {
+                grid-row: span 1;
+            }
+
+            .card-text h3 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                padding: 24px;
+            }
+
+            .card-text h3 {
+                font-size: 1.5rem;
+            }
+
+            .time-zone h3,
+            .tech-stack h3 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="portfolio-grid" id="portfolio-grid">
+        <div class="card large collaboration">
+            <div class="card-text">
+                <h3>
+                    I prioritize client<br />
+                    collaboration, fostering<br />
+                    open communication
+                </h3>
+            </div>
+       
+        </div>
+        
+        <div class="card timezone">
+            <div class="time-zone">
+                <div class="map-dots"></div>
+                <h3>I'm very flexible with time zone communications</h3>
+                <div class="timezone-tags">
+                    <span class="timezone-tag">USA</span>
+                    <span class="timezone-tag">Russia</span>
+                    <span class="timezone-tag">Germany</span>
+                </div>
+            </div>
+            
+            <div class="tech-stack">
+                <h3>My tech stack</h3>
+                <p>I constantly try to improve</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">ReactJS</span>
+                    <span class="tech-tag">VueJS</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">NuxtJS</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">GraphQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
 </html>

@@ -235,6 +235,7 @@ header {
 
 /* Large featured card with image */
 .card.large {
+  text-align: justify;
   grid-column: span 2;
   display: flex;
   align-items: flex-end;
@@ -473,8 +474,9 @@ header {
   align-items: center;
 }
 
-.testimonial-card:hover {
-  transform: translateY(-5px);
+.swiper-slide.testimonial-card:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.05);
   background: rgba(25, 28, 45, 0.95);
 }
 
