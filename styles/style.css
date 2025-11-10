@@ -12,7 +12,7 @@ body {
   background-size: fill;
   background-position: center;
   color: #fff;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   text-align: center;
 }
 
@@ -197,7 +197,7 @@ header {
 .intro {
   font-size: 1rem;
   color: #bcbcbc;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .cta {
@@ -656,7 +656,7 @@ header {
 }
 
 .contact-section p {
-  margin-top: 20px;
+  margin: 20px;
   font-size: 1.1rem;
   color: #ccc;
 }
@@ -680,7 +680,7 @@ header {
 
 .footer {
   padding: 20px 40px;
-  font-family: "Inter", Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   font-size: 14px;
   display: flex;
   justify-content: space-between;
@@ -692,6 +692,7 @@ header {
 }
 
 .footer-container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -743,7 +744,7 @@ header {
 }
 
 /* footer Responsive */
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .footer-container {
     flex-direction: column;
     text-align: center;
@@ -753,7 +754,9 @@ header {
     text-align: center;
   }
 }
-
+.footer-links a{
+  margin-right: 10px;
+}
 /*links buttons*/
 .Social-button {
   display: flex;
@@ -789,7 +792,7 @@ header {
   background: linear-gradient(120deg, #48cf4d, #09a539, #07b70e);
 }
 .button:nth-child(3) {
-  background: linear-gradient(120deg, #0a0b0b, #020202);
+  background: linear-gradient(120deg, #0a0b0b25, #02020200);
 }
 
 .button:nth-child(4) {
@@ -898,30 +901,3 @@ header {
   }
 }
 
-/*scroll bar coloring*/
-
-body {
-  --sb-track-color: #232e33;
-  --sb-thumb-color: #55247b;
-  --sb-size: 14px;
-}
-
-body::-webkit-scrollbar {
-  width: var(--sb-size);
-}
-
-body::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
-  border-radius: 3px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb-color);
-  border-radius: 3px;
-}
-
-@supports not selector(::-webkit-scrollbar) {
-  body {
-    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
-  }
-}
