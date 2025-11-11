@@ -79,17 +79,23 @@
           required
         ></textarea>
 
-        <button type="button" class="btn">
-          <span class="strong">SPACE</span>
-          <div id="container-stars">
-            <div id="stars"></div>
-          </div>
-
-          <div id="glow">
-            <div class="circle"></div>
-            <div class="circle"></div>
-          </div>
-        </button>
+     <div
+              class="glowing-box glowing-box-active"
+              style="--animation-speed: 2s"
+            >
+              <div class="glowing-box-animations">
+                <div class="glowing-box-glow"></div>
+                <div class="glowing-box-stars-masker">
+                  <div class="glowing-box-stars"></div>
+                </div>
+              </div>
+              <div class="glowing-box-borders-masker">
+                <div class="glowing-box-borders"></div>
+              </div>
+              <button class="glowing-box-button" onclick="location.href='#projects'">
+                <span class="glowing-span">Minimalist Glow Button</span>
+              </button>
+            </div>
       </form>
       <div class="quote"></div>
     </section>

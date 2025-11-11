@@ -266,7 +266,7 @@
 .glowing-box .glowing-box-button {
   overflow: visible;
 }
-glowing-box-button {
+.glowing-box-button {
   background-color: transparent;
   border: 1px solid transparent;
   font-family: inherit;
