@@ -269,7 +269,7 @@
 .glowing-box-button {
   background-color: transparent;
   border: 1px solid transparent;
-  font-family: inherit;
+  font-family: "poppins", sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
@@ -296,6 +296,7 @@
   top: -2px;
   transition: 1s all;
   width: calc(100% + 4px);
+  color: #CBACF9;
 }
 
 .glowing-box-button .glowing-span {
@@ -310,6 +311,7 @@
   -webkit-text-fill-color: transparent;
   display: block;
 }
+
 
 .glowing-box-button:hover:after {
   opacity: 0.7;

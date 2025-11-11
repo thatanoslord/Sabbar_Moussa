@@ -9,7 +9,7 @@
 
 body {
   background-image: url("../images/Contact_Form.svg");
-  background-size: fill;
+  background-size: inherit;
   background-position: center;
   color: #fff;
   font-family: "Poppins", Arial, sans-serif;

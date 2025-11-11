@@ -349,7 +349,7 @@ header {
 .glowing-box-button {
   background-color: transparent;
   border: 1px solid transparent;
-  font-family: inherit;
+  font-family: "Poppins", sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
