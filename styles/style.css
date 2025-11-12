@@ -375,7 +375,7 @@ header {
 
         .card.large {
             grid-row: span 2;
-            background-image: url("../images/collaboration-bg.svg");
+            background-image: url("../images/computer.svg");
             background-size: cover;
             background-position: center;
         }
