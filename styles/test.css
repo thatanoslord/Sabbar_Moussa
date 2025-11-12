@@ -4,7 +4,7 @@
   align-items: stretch;
   gap: 2rem;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.02);
+  background:linear-gradient(135deg, #1a1a3e 0%, #0f0f2e 1%);;
   backdrop-filter: blur(80px) brightness(1.2);
   grid-column: 1 / -1;
   width: 100%;
