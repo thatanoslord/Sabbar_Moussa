@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  color: white;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("../images/Contact_Form.svg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px; /* navbar spacing */
+}
+
+.hero {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  background: linear-gradient(135deg, #240046, #7b2cbf, #3a0ca3);
+  border-radius: 25px;
+  padding: 80px 60px;
+  text-align: left;
+  box-shadow: 0 0 40px rgba(123, 44, 191, 0.4);
+  overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, #00f5d4 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: 0;
+}
+
+.hero::before {
+  top: -50px;
+  left: -50px;
+}
+
+.hero::after {
+  bottom: -60px;
+  right: -40px;
+  background: radial-gradient(circle, #4361ee 0%, transparent 70%);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.underline {
+  display: inline-block;
+  width: 60px;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #00f5d4, #4361ee);
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
