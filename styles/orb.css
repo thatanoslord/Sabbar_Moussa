@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #ffff  ;
+}
+.orb-wrapper {
+   display: none;
+   
+}
+@media (max-width: 768px){
+
+    /* .orb-wrapper {
+    display: flex;
+align-items: center;
+   width: 43px;  
+    height: 43px; 
+  }*/
+  .orb-wrapper {
+    width: 33px;  /* Match navbar height */
+    height: 33px; /* Match navbar height (before padding) */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.orb-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.orb-container canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Fallback styling */
+.orb-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 12px;
+}
+
+/* Ensure logo link doesn't add extra spacing */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    line-height: 0;
+}
+
+/* Navbar adjustments to maintain fixed height */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar .nav-menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+} 

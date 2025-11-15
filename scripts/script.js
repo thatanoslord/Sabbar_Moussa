@@ -130,3 +130,16 @@ document.addEventListener('click', (e) => {
     navMenu.classList.remove('active');
   }
 });
+
+const text = document.getElementById("interactive-text");
+
+document.addEventListener("mousemove", (e) => {
+  const { clientX: x, clientY: y } = e;
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight / 2;
+
+  const moveX = (x - centerX) / 20; // strength of movement
+  const moveY = (y - centerY) / 20;
+
+  text.style.transform = `translate(${moveX}px, ${moveY}px)`;
+});

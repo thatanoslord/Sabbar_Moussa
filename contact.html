@@ -14,6 +14,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles/orb.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/contact.css" />
     <title>Contact – Moussa Sabbar</title>
@@ -22,12 +23,23 @@
     <!-- Headers -->
     <header>
       <nav class="navbar">
-        <a href="index.html#hero" class="logo">Logo</a>
+        <div class="orb-wrapper">
+         <a href="index.html" class="logo"></a> <div
+            id="orb-container"
+            class="orb-container"
+            aria-hidden="true"
+          ></div></a>
+        </div>
+        
         <ul class="nav-menu">
           <li><a href="index.html#hero" class="nav-link">Home</a></li>
-          <li><a href="index.html#portfolio-grid" class="nav-link">About</a></li>
+          <li>
+            <a href="index.html#portfolio-grid" class="nav-link">About</a>
+          </li>
           <li><a href="index.html#projects" class="nav-link">Projects</a></li>
-          <li><a href="index.html#testimonials" class="nav-link">Testimonials</a></li>
+          <li>
+            <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+          </li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
 
@@ -79,29 +91,31 @@
           required
         ></textarea>
 
-     <div
-              class="glowing-box glowing-box-active"
-              style="--animation-speed: 2s"
-            >
-              <div class="glowing-box-animations">
-                <div class="glowing-box-glow"></div>
-                <div class="glowing-box-stars-masker">
-                  <div class="glowing-box-stars"></div>
-                </div>
-              </div>
-              <div class="glowing-box-borders-masker">
-                <div class="glowing-box-borders"></div>
-              </div>
-              <button class="glowing-box-button" onclick="location.href='#projects'">
-                <span class="glowing-span">Send message</span>
-              </button>
+        <div
+          class="glowing-box glowing-box-active"
+          style="--animation-speed: 2s"
+        >
+          <div class="glowing-box-animations">
+            <div class="glowing-box-glow"></div>
+            <div class="glowing-box-stars-masker">
+              <div class="glowing-box-stars"></div>
             </div>
+          </div>
+          <div class="glowing-box-borders-masker">
+            <div class="glowing-box-borders"></div>
+          </div>
+          <button
+            class="glowing-box-button"
+            onclick="location.href='#projects'"
+          >
+            <span class="glowing-span">Send message</span>
+          </button>
+        </div>
       </form>
       <div class="quote"></div>
     </section>
 
-
-<footer class="footer">
+    <footer class="footer">
       <div class="footer-container">
         <!-- Left links -->
         <div class="footer-links">
@@ -154,15 +168,31 @@
           </button>
 
           <button class="button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="24" height="24" fill="currentColor">
-          <path d="M714.163 519.284L1160.89 0H1056.36L671.351 450.887L375.313 0H0L463.756 681.821L0 1226.48H104.532L512.006 752.218L824.687 1226.48H1200L714.137 519.284H714.163ZM561.021 686.351L517.874 623.923L142.235 79.549H341.333L639.009 511.497L682.156 573.925L1064.31 1150.45H865.215L561.021 686.351Z"/>
-        </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1200 1227"
+              width="24"
+              height="24"
+              fill="currentColor"
+            >
+              <path
+                d="M714.163 519.284L1160.89 0H1056.36L671.351 450.887L375.313 0H0L463.756 681.821L0 1226.48H104.532L512.006 752.218L824.687 1226.48H1200L714.137 519.284H714.163ZM561.021 686.351L517.874 623.923L142.235 79.549H341.333L639.009 511.497L682.156 573.925L1064.31 1150.45H865.215L561.021 686.351Z"
+              />
+            </svg>
           </button>
 
           <button class="button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-    <path d="M22.675 0h-21.35C.597 0 0 .598 0 1.333v21.333C0 23.402.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.097 2.795.141v3.24l-1.918.001c-1.504 0-1.795.716-1.795 1.764v2.313h3.587l-.467 3.622h-3.12V24h6.117C23.403 24 24 23.402 24 22.667V1.333C24 .598 23.403 0 22.675 0z"/>
-  </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="currentColor"
+            >
+              <path
+                d="M22.675 0h-21.35C.597 0 0 .598 0 1.333v21.333C0 23.402.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.097 2.795.141v3.24l-1.918.001c-1.504 0-1.795.716-1.795 1.764v2.313h3.587l-.467 3.622h-3.12V24h6.117C23.403 24 24 23.402 24 22.667V1.333C24 .598 23.403 0 22.675 0z"
+              />
+            </svg>
           </button>
 
           <button class="button">
@@ -192,6 +222,8 @@
       </div>
     </footer>
     <!-- scripts -->
-     <script src="scripts/contact.js"></script>
+
+    <script src="scripts/contact.js"></script>
+    <script src="scripts/orb.js"></script>
   </body>
 </html>
