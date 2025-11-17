@@ -290,3 +290,22 @@
         );
         animation: float 8s ease-in-out infinite;
       }
+       @keyframes float {
+        0%,
+        100% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        50% {
+          transform: translate(-30px, 30px) rotate(180deg);
+        }
+      }
+
+      .image-container {
+        width: 100%;
+        height: 320px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 25px;
+
+        position: relative;
+      }
