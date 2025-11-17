@@ -294,3 +294,108 @@ document.addEventListener('click', (e) => {
             showFallback("Program link failed");
             return;
           }
+          const positions = new Float32Array([-1, -1, 3, -1, -1, 3]);
+          const uvs = new Float32Array([0, 0, 2, 0, 0, 2]);
+
+          const positionBuffer = gl.createBuffer();
+          gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+          gl.bufferData(gl.ARRAY_BUFFER, positions, gl.STATIC_DRAW);
+
+          const uvBuffer = gl.createBuffer();
+          gl.bindBuffer(gl.ARRAY_BUFFER, uvBuffer);
+          gl.bufferData(gl.ARRAY_BUFFER, uvs, gl.STATIC_DRAW);
+
+          const positionLocation = gl.getAttribLocation(program, "position");
+          const uvLocation = gl.getAttribLocation(program, "uv");
+          const iTimeLocation = gl.getUniformLocation(program, "iTime");
+          const iResolutionLocation = gl.getUniformLocation(
+            program,
+            "iResolution"
+          );
+          const hueLocation = gl.getUniformLocation(program, "hue");
+          const hoverLocation = gl.getUniformLocation(program, "hover");
+          const rotLocation = gl.getUniformLocation(program, "rot");
+          const hoverIntensityLocation = gl.getUniformLocation(
+            program,
+            "hoverIntensity"
+          );
+
+          function resize() {
+            const dpr = window.devicePixelRatio || 1;
+            const w = container.clientWidth;
+            const h = container.clientHeight;
+            canvas.width = Math.max(1, Math.floor(w * dpr));
+            canvas.height = Math.max(1, Math.floor(h * dpr));
+            canvas.style.width = w + "px";
+            canvas.style.height = h + "px";
+            gl.viewport(0, 0, canvas.width, canvas.height);
+          }
+          window.addEventListener("resize", resize);
+          resize();
+
+          let targetHover = 0;
+          let currentHover = 0;
+          let lastTime = performance.now();
+          let currentRot = 0;
+          const rotationSpeed = 0.3;
+
+          function handleMouseMove(e) {
+            const rect = container.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const width = rect.width;
+            const height = rect.height;
+            const size = Math.min(width, height);
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const uvX = ((x - centerX) / size) * 2;
+            const uvY = ((y - centerY) / size) * 2;
+            targetHover = Math.sqrt(uvX * uvX + uvY * uvY) < 0.8 ? 1 : 0;
+          }
+          function handleMouseLeave() {
+            targetHover = 0;
+          }
+
+          container.addEventListener("mousemove", handleMouseMove);
+          container.addEventListener("mouseleave", handleMouseLeave);
+
+          let rafId;
+          function update(t) {
+            rafId = requestAnimationFrame(update);
+            const dt = (t - lastTime) * 0.001;
+            lastTime = t;
+
+            const effectiveHover = targetHover;
+            currentHover += (effectiveHover - currentHover) * 0.1;
+            if (rotateOnHover && effectiveHover > 0.5) {
+              currentRot += dt * rotationSpeed;
+            }
+
+            gl.clear(gl.COLOR_BUFFER_BIT);
+            gl.useProgram(program);
+
+            gl.uniform1f(iTimeLocation, t * 0.001);
+            gl.uniform3f(
+              iResolutionLocation,
+              canvas.width,
+              canvas.height,
+              canvas.width / canvas.height
+            );
+            gl.uniform1f(hueLocation, hue);
+            gl.uniform1f(hoverLocation, currentHover);
+            gl.uniform1f(rotLocation, currentRot);
+            gl.uniform1f(hoverIntensityLocation, hoverIntensity);
+
+            gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+            gl.enableVertexAttribArray(positionLocation);
+            gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
+
+            gl.bindBuffer(gl.ARRAY_BUFFER, uvBuffer);
+            gl.enableVertexAttribArray(uvLocation);
+            gl.vertexAttribPointer(uvLocation, 2, gl.FLOAT, false, 0, 0);
+
+            gl.drawArrays(gl.TRIANGLES, 0, 3);
+          }
+
+          rafId = requestAnimationFrame(update);
+        }
