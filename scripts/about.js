@@ -399,3 +399,18 @@ document.addEventListener('click', (e) => {
 
           rafId = requestAnimationFrame(update);
         }
+        function showFallback(message) {
+          const fallback = document.createElement("div");
+          fallback.style.cssText =
+            "display:flex;align-items:center;justify-content:center;width:100%;height:100%;color:#666;";
+          fallback.innerText = message || "Orb";
+          container.appendChild(fallback);
+        }
+
+        try {
+          init();
+        } catch (err) {
+          console.error("Orb init error:", err);
+          showFallback("Failed to initialize orb");
+        }
+      })();
