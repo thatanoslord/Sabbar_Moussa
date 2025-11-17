@@ -244,3 +244,53 @@ document.addEventListener('click', (e) => {
             gl_FragColor = vec4(col.rgb * col.a, col.a);
         }
       `;
+        function createShader(gl, type, source) {
+          const shader = gl.createShader(type);
+          if (!shader) return null;
+          gl.shaderSource(shader, source);
+          gl.compileShader(shader);
+          if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+            console.error("Shader compile error:", gl.getShaderInfoLog(shader));
+            gl.deleteShader(shader);
+            return null;
+          }
+          return shader;
+        }
+
+        function createProgram(gl, vertexShader, fragmentShader) {
+          const program = gl.createProgram();
+          if (!program) return null;
+          gl.attachShader(program, vertexShader);
+          gl.attachShader(program, fragmentShader);
+          gl.linkProgram(program);
+          if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+            console.error("Program link error:", gl.getProgramInfoLog(program));
+            gl.deleteProgram(program);
+            return null;
+          }
+          return program;
+        }
+
+        function init() {
+          const canvas = document.createElement("canvas");
+          const gl = canvas.getContext("webgl", {
+            alpha: true,
+            premultipliedAlpha: false,
+          });
+          if (!gl) {
+            showFallback("WebGL not supported");
+            return;
+          }
+          container.appendChild(canvas);
+
+          const vShader = createShader(gl, gl.VERTEX_SHADER, vert);
+          const fShader = createShader(gl, gl.FRAGMENT_SHADER, frag);
+          if (!vShader || !fShader) {
+            showFallback("Shader compilation failed");
+            return;
+          }
+          const program = createProgram(gl, vShader, fShader);
+          if (!program) {
+            showFallback("Program link failed");
+            return;
+          }
