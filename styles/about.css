@@ -13,3 +13,43 @@
         color: #ffffff;
         overflow-x: hidden;
       }
+
+      /* hero section styles */
+      .hero-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        position: relative;
+      }
+
+      .hero-container {
+        max-width: 1400px;
+        width: 100%;
+        background: linear-gradient(#1a1a3e85, #0f0f2e4d) padding-box,
+          linear-gradient(137deg, transparent 65%, #e81cff4f, #40c9ff5e)
+            border-box;
+        border-radius: 32px;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        padding: 80px;
+        position: relative;
+      }
+
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+      }
+
+      .hero-title {
+        font-size: 72px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 24px;
+        letter-spacing: -0.02em;
+      }
