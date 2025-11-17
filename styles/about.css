@@ -27,9 +27,9 @@
       .hero-container {
         max-width: 1400px;
         width: 100%;
-        background: linear-gradient(#1a1a3e85, #0f0f2e4d) padding-box,
+        /* background: linear-gradient(#1a1a3e85, #0f0f2e4d) padding-box,
           linear-gradient(137deg, transparent 65%, #e81cff4f, #40c9ff5e)
-            border-box;
+            border-box; */
         border-radius: 32px;
         overflow: hidden;
         display: grid;
