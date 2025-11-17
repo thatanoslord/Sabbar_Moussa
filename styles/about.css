@@ -108,4 +108,34 @@
         border-color: #a855f7;
         color: #a855f7;
       }
+      
       /* the orb logo styling and animation */
+      .hero-visual {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        order: -1;
+      }
+
+      .orb-wrapper {
+        width: 100%;
+        height: 600px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .orb-container {
+        width: 500px;
+        height: 500px;
+        position: relative;
+      }
+
+      .orb-container canvas {
+        width: 100% !important;
+        height: 100% !important;
+      }
+      
