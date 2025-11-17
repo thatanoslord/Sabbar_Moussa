@@ -190,3 +190,17 @@
         left: 0;
         background: linear-gradient(to right, #000 0%, transparent 100%);
       }
+      .scroll-container::after {
+        right: 0;
+        background: linear-gradient(to left, #000 0%, transparent 100%);
+      }
+
+      .scroll-content {
+        display: flex;
+        gap: 4rem;
+        animation: scrollRight 30s linear infinite;
+      }
+
+      .scroll-container:nth-child(2) .scroll-content {
+        animation: scrollLeft 30s linear infinite;
+      }
