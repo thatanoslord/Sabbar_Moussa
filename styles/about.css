@@ -53,3 +53,18 @@
         margin-bottom: 24px;
         letter-spacing: -0.02em;
       }
+
+      .hero-title .highlight {
+        background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-subtitle {
+        font-size: 20px;
+        line-height: 1.6;
+        color: #b4b4b4;
+        margin-bottom: 40px;
+        max-width: 500px;
+      }
