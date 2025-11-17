@@ -204,3 +204,27 @@
       .scroll-container:nth-child(2) .scroll-content {
         animation: scrollLeft 30s linear infinite;
       }
+      .logo-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .logo-icon {
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+      }
+
+      .logo-text {
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
