@@ -18,6 +18,16 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/contact.css" />
     <title>Contact – Moussa Sabbar</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "m_NpRBYOzXQLivuWj",
+      });
+   })();
+</script>
   </head>
   <body class="contact-body">
     <!-- Headers -->
@@ -52,9 +62,9 @@
     </header>
 
     <section class="form-section" id="contact">
-      <form class="formulaire">
+      <form class="formulaire" id="contact-form">
         <div class="paragraph">
-          <h2>Let’s connect constellations</h2>
+          <h2>Let's connect constellations</h2>
           <p>
             Let's align our constellations! Reach out and let the magic of
             collaboration illuminate our skies.
@@ -73,13 +83,6 @@
           id="email"
           name="email"
           placeholder="Email"
-          required
-        />
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="Phone Number"
           required
         />
         <textarea
@@ -105,8 +108,9 @@
             <div class="glowing-box-borders"></div>
           </div>
           <button
+            type="button"
             class="glowing-box-button"
-            onclick="location.href='#projects'"
+            id="submit-btn"
           >
             <span class="glowing-span">Send message</span>
           </button>
@@ -222,7 +226,7 @@
       </div>
     </footer>
     <!-- scripts -->
-
+    
     <script src="scripts/contact.js"></script>
     <script src="scripts/orb.js"></script>
   </body>
