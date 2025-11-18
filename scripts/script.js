@@ -64,7 +64,7 @@ const swiper = new Swiper(".swiper", {
 
 //Nav link active state on scroll
 
-const Sections = document.querySelectorAll("section");
+const Sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
 
 window.addEventListener("scroll", () => {
@@ -97,8 +97,11 @@ window.addEventListener("scroll", () => {
 
   navLinks.forEach((link) => {
     link.classList.remove("active");
+    const scrollTarget =
+      link.dataset.scrollTarget ||
+      (link.hash ? link.hash.replace("#", "") : "");
 
-    if (current && link.getAttribute("href").includes(current)) {
+    if (current && scrollTarget === current) {
       link.classList.add("active");
     }
   });

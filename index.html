@@ -29,11 +29,38 @@
       <nav class="navbar">
         <a href="#hero" class="logo">Logo</a>
         <ul class="nav-menu">
-          <li><a href="#hero" class="nav-link">Home</a></li>
-          <li><a href="#portfolio-grid" class="nav-link">About</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li>
+            <a href="#hero" class="nav-link" data-scroll-target="hero">Home</a>
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="nav-link"
+              data-scroll-target="portfolio-grid"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="nav-link" data-scroll-target="projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#testimonials"
+              class="nav-link"
+              data-scroll-target="testimonials"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="nav-link"
+              data-scroll-target="contact"
+              >Contact</a
+            >
+          </li>
         </ul>
 
         <div class="burger-menu">
@@ -405,7 +432,13 @@
 
         <!-- Social icons -->
         <div class="Social-button">
-          <button class="button">
+          <a
+            class="button"
+            href="https://www.instagram.com/theonlysplinter/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+          >
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -422,8 +455,14 @@
                 fill="currentColor"
               ></path>
             </svg>
-          </button>
-          <button class="button">
+          </a>
+          <a
+            class="button"
+            href="https://wa.me/212610132293"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="WhatsApp"
+          >
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -444,21 +483,47 @@
                 fill="currentColor"
               ></path>
             </svg>
-          </button>
+          </a>
 
-          <button class="button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="24" height="24" fill="currentColor">
-          <path d="M714.163 519.284L1160.89 0H1056.36L671.351 450.887L375.313 0H0L463.756 681.821L0 1226.48H104.532L512.006 752.218L824.687 1226.48H1200L714.137 519.284H714.163ZM561.021 686.351L517.874 623.923L142.235 79.549H341.333L639.009 511.497L682.156 573.925L1064.31 1150.45H865.215L561.021 686.351Z"/>
-        </svg>
-          </button>
+          <a
+            class="button"
+            href="https://www.linkedin.com/in/moussa-sabbar-131058213/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.983 3.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zM.5 8.5h4v12h-4zM8.5 8.5h3.8v1.71h.05c.53-.9 1.82-1.85 3.75-1.85 4 0 4.75 2.64 4.75 6.07v6.07h-4v-5.38c0-1.28-.02-2.93-1.85-2.93-1.85 0-2.13 1.44-2.13 2.83v5.48h-4z"
+              />
+            </svg>
+          </a>
 
-          <button class="button">
+          <a
+            class="button"
+            href="https://www.facebook.com/share/1MzMG5TYtw/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Facebook"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
     <path d="M22.675 0h-21.35C.597 0 0 .598 0 1.333v21.333C0 23.402.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.097 2.795.141v3.24l-1.918.001c-1.504 0-1.795.716-1.795 1.764v2.313h3.587l-.467 3.622h-3.12V24h6.117C23.403 24 24 23.402 24 22.667V1.333C24 .598 23.403 0 22.675 0z"/>
   </svg>
-          </button>
+          </a>
 
-          <button class="button">
+          <a
+            class="button"
+            href="https://github.com/thatanoslord"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+          >
             <svg
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -474,7 +539,7 @@
                 fill-rule="evenodd"
               ></path>
             </svg>
-          </button>
+          </a>
         </div>
 
         <!-- Right side -->
