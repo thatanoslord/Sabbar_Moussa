@@ -489,3 +489,31 @@
         letter-spacing: 1px;
         font-weight: 600;
       }
+
+      /* PROJECTS SECTION */
+      .projects-section {
+        margin-top: 80px;
+        animation: fadeInUp 0.8s ease 0.2s both;
+      }
+
+      .section-title {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 50px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #333;
+      }
+
+      .project-card {
+        background: linear-gradient(#1a1a3e85, #0f0f2e4d) padding-box,
+          linear-gradient(137deg, transparent 65%, #e81cff4f, #40c9ff5e)
+            border-box;
+        border-radius: 25px;
+        padding: 40px;
+        margin-bottom: 30px;
+        /* border: 1px solid #2a2a2a; */
+        transition: all 0.4s ease;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+      }
