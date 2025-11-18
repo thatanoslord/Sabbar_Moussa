@@ -461,3 +461,31 @@
         max-width: 700px;
         margin-bottom: 40px;
       }
+
+      .stats {
+        display: flex;
+        gap: 60px;
+        margin-top: 50px;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 56px;
+        font-weight: 800;
+        background: linear-gradient(135deg, #5e1474 0%, #690e84 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 8px;
+      }
+
+      .stat-label {
+        font-size: 13px;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+      }
