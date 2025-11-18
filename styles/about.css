@@ -574,3 +574,37 @@
       .project-icon.blue {
         background: linear-gradient(135deg, #35d4ff 0%, #2196f3 100%);
       }
+
+      .project-info h3 {
+        font-size: 26px;
+        margin-bottom: 5px;
+      }
+
+      .project-info .project-type {
+        color: #666;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .project-description {
+        color: #999;
+        line-height: 1.7;
+        font-size: 16px;
+      }
+
+      .project-tags {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+      }
+
+      .tag {
+        padding: 8px 16px;
+        background: #222;
+        border-radius: 20px;
+        font-size: 13px;
+        color: wheat;
+        /* border: 1px solid #333; */
+      }
