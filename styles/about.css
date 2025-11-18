@@ -608,3 +608,27 @@
         color: wheat;
         /* border: 1px solid #333; */
       }
+
+      /* responsive for the discription container*/
+      @media (max-width: 1024px) {
+        .container {
+          flex-direction: column;
+          gap: 40px;
+        }
+
+        .left-section {
+          position: relative;
+          top: 0;
+          flex: 0 0 auto;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+
+        .hero-title {
+          font-size: 48px;
+        }
+
+        .stats {
+          gap: 30px;
+        }
+      }
