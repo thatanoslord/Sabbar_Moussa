@@ -10,7 +10,7 @@ window.addEventListener("scroll", () => {
 
 //Nav link active state on scroll
 
-const Sections = document.querySelectorAll("section");
+const Sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
 
 window.addEventListener("scroll", () => {
@@ -43,8 +43,11 @@ window.addEventListener("scroll", () => {
 
   navLinks.forEach((link) => {
     link.classList.remove("active");
+    const scrollTarget =
+      link.dataset.scrollTarget ||
+      (link.hash ? link.hash.replace("#", "") : "");
 
-    if (current && link.getAttribute("href").includes(current)) {
+    if (current && scrollTarget === current) {
       link.classList.add("active");
     }
   });
@@ -82,12 +85,8 @@ document.addEventListener('click', (e) => {
 //orb script
 // WebGL Orb Implementation
       (function () {
-        const container = document.getElementById("orb-container");
-        if (!container) return;
-
-        const hue = 0.0;
-        const hoverIntensity = 0.2;
-        const rotateOnHover = true;
+        const containers = document.querySelectorAll("[data-orb]");
+        if (!containers.length) return;
 
         const vert = `
         precision highp float;
@@ -271,27 +270,47 @@ document.addEventListener('click', (e) => {
           return program;
         }
 
-        function init() {
+        function showFallback(container, message) {
+          const fallback = document.createElement("div");
+          fallback.style.cssText =
+            "display:flex;align-items:center;justify-content:center;width:100%;height:100%;color:#666;";
+          fallback.innerText = message || "Orb";
+          container.innerHTML = "";
+          container.appendChild(fallback);
+        }
+
+        function initOrb(container) {
+          const hue =
+            container.dataset.orbHue !== undefined
+              ? parseFloat(container.dataset.orbHue)
+              : 0.0;
+          const hoverIntensity =
+            container.dataset.orbHoverIntensity !== undefined
+              ? parseFloat(container.dataset.orbHoverIntensity)
+              : 0.2;
+          const rotateOnHover = container.dataset.orbRotate !== "false";
+
           const canvas = document.createElement("canvas");
           const gl = canvas.getContext("webgl", {
             alpha: true,
             premultipliedAlpha: false,
           });
           if (!gl) {
-            showFallback("WebGL not supported");
+            showFallback(container, "WebGL not supported");
             return;
           }
+          container.innerHTML = "";
           container.appendChild(canvas);
 
           const vShader = createShader(gl, gl.VERTEX_SHADER, vert);
           const fShader = createShader(gl, gl.FRAGMENT_SHADER, frag);
           if (!vShader || !fShader) {
-            showFallback("Shader compilation failed");
+            showFallback(container, "Shader compilation failed");
             return;
           }
           const program = createProgram(gl, vShader, fShader);
           if (!program) {
-            showFallback("Program link failed");
+            showFallback(container, "Program link failed");
             return;
           }
           const positions = new Float32Array([-1, -1, 3, -1, -1, 3]);
@@ -369,6 +388,8 @@ document.addEventListener('click', (e) => {
             currentHover += (effectiveHover - currentHover) * 0.1;
             if (rotateOnHover && effectiveHover > 0.5) {
               currentRot += dt * rotationSpeed;
+            } else if (!rotateOnHover) {
+              currentRot += dt * rotationSpeed * 0.2;
             }
 
             gl.clear(gl.COLOR_BUFFER_BIT);
@@ -399,18 +420,13 @@ document.addEventListener('click', (e) => {
 
           rafId = requestAnimationFrame(update);
         }
-        function showFallback(message) {
-          const fallback = document.createElement("div");
-          fallback.style.cssText =
-            "display:flex;align-items:center;justify-content:center;width:100%;height:100%;color:#666;";
-          fallback.innerText = message || "Orb";
-          container.appendChild(fallback);
-        }
 
-        try {
-          init();
-        } catch (err) {
-          console.error("Orb init error:", err);
-          showFallback("Failed to initialize orb");
-        }
+        containers.forEach((container) => {
+          try {
+            initOrb(container);
+          } catch (err) {
+            console.error("Orb init error:", err);
+            showFallback(container, "Failed to initialize orb");
+          }
+        });
       })();

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
       rel="stylesheet"
     />
@@ -13,13 +17,52 @@
   <body id="about">
     <header>
       <nav class="navbar">
-        <a href="#hero" class="logo">Logo</a>
+        <a href="#hero" class="logo" aria-label="Go to hero">
+          <div
+            class="nav-orb"
+            data-orb
+            data-orb-hover-intensity="0.08"
+            data-orb-rotate="false"
+          ></div>
+        </a>
         <ul class="nav-menu">
-          <li><a href="#hero" class="nav-link">Home</a></li>
-          <li><a href="#portfolio-grid" class="nav-link">About</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li>
+            <a
+              href="index.html#hero"
+              class="nav-link"
+              data-scroll-target="hero"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#portfolio-grid"
+              class="nav-link"
+              data-scroll-target="portfolio-grid"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#projects"
+              class="nav-link"
+              data-scroll-target="projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#testimonials"
+              class="nav-link"
+              data-scroll-target="testimonials"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" class="nav-link" data-scroll-target="contact"
+              >Contact</a
+            >
+          </li>
         </ul>
 
         <div class="burger-menu">
@@ -32,7 +75,7 @@
 
     <!-- hero section -->
 
-     <section class="hero-section">
+    <section id="hero" class="hero-section">
       <div class="hero-container">
         <div class="hero-content">
           <h1 class="hero-title">
@@ -55,6 +98,7 @@
               id="orb-container"
               class="orb-container"
               aria-hidden="true"
+              data-orb
             ></div>
           </div>
         </div>
@@ -71,53 +115,57 @@
     <div class="scroll-container scroll-right">
       <div class="scroll-content">
         <div class="logo-item">
-          <img class="logo-icon" src="icons/html5.svg" alt="" />
+          <i class="ri-html5-line logo-icon"></i>
           <div class="logo-text">HTML5</div>
         </div>
         <div class="logo-item">
-          <img class="logo-icon" src="icons/css3.svg" alt="" />
+          <i class="ri-css3-fill logo-icon"></i>
+          
           <div class="logo-text">CSS3</div>
         </div>
+        
         <div class="logo-item">
-          <img class="logo-icon" src="icons/nextjs2.svg" alt="" />
-          <div class="logo-text">Next.js</div>
-        </div>
-        <div class="logo-item">
-          <img class="logo-icon" src="icons/js.svg" alt="" />
+          <i class="ri-javascript-fill logo-icon"></i>
           <div class="logo-text">JavaScript</div>
         </div>
         <div class="logo-item">
-          <img class="logo-icon" src="icons/react.svg" alt="" />
+          <i class="ri-reactjs-line logo-icon"></i>
           <div class="logo-text">React</div>
         </div>
         <div class="logo-item">
-          <img class="logo-icon" src="icons/tailwindcss.svg" alt="" />
+          <i class="ri-tailwind-css-fill logo-icon"></i>
           <div class="logo-text">Tailwind</div>
+        </div>
+        <div class="logo-item">
+          <i class="ri-nextjs-fill logo-icon"></i>
+          <div class="logo-text">Next.js</div>
         </div>
         <!-- Duplicate for seamless loop -->
         <div class="logo-item">
-          <img class="logo-icon" src="icons/html5.svg" alt="" />
+          <i class="ri-html5-line logo-icon"></i>
           <div class="logo-text">HTML5</div>
         </div>
         <div class="logo-item">
-          <img class="logo-icon" src="icons/css3.svg" alt="" />
+          <i class="ri-css3-fill logo-icon"></i>
+          
           <div class="logo-text">CSS3</div>
         </div>
+        
         <div class="logo-item">
-          <img class="logo-icon" src="icons/nextjs2.svg" alt="" />
-          <div class="logo-text">Next.js</div>
-        </div>
-        <div class="logo-item">
-          <img class="logo-icon" src="icons/js.svg" alt="" />
+          <i class="ri-javascript-fill logo-icon"></i>
           <div class="logo-text">JavaScript</div>
         </div>
         <div class="logo-item">
-          <img class="logo-icon" src="icons/react.svg" alt="" />
+          <i class="ri-reactjs-line logo-icon"></i>
           <div class="logo-text">React</div>
         </div>
         <div class="logo-item">
-          <img class="logo-icon" src="icons/tailwindcss.svg" alt="" />
+          <i class="ri-tailwind-css-fill logo-icon"></i>
           <div class="logo-text">Tailwind</div>
+        </div>
+        <div class="logo-item">
+          <i class="ri-nextjs-fill logo-icon"></i>
+          <div class="logo-text">Next.js</div>
         </div>
       </div>
     </div>
@@ -126,60 +174,64 @@
     <div class="scroll-container scroll-left">
       <div class="scroll-content">
         <div class="logo-item">
-          <div class="logo-icon">💎</div>
-          <div class="logo-text">Logoipsum</div>
+          <i class="ri-html5-line logo-icon"></i>
+          <div class="logo-text">HTML5</div>
         </div>
         <div class="logo-item">
-          <div class="logo-icon">🚀</div>
-          <div class="logo-text">Logoipsum</div>
+          <i class="ri-css3-fill logo-icon"></i>
+          
+          <div class="logo-text">CSS3</div>
+        </div>
+        
+        <div class="logo-item">
+          <i class="ri-javascript-fill logo-icon"></i>
+          <div class="logo-text">JavaScript</div>
         </div>
         <div class="logo-item">
-          <div class="logo-icon">🎯</div>
-          <div class="logo-text">Logoipsum</div>
+          <i class="ri-reactjs-line logo-icon"></i>
+          <div class="logo-text">React</div>
         </div>
         <div class="logo-item">
-          <div class="logo-icon">🌟</div>
-          <div class="logo-text">Logoipsum</div>
+          <i class="ri-tailwind-css-fill logo-icon"></i>
+          <div class="logo-text">Tailwind</div>
         </div>
         <div class="logo-item">
-          <div class="logo-icon">💫</div>
-          <div class="logo-text">Logoipsum</div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-icon">🔮</div>
-          <div class="logo-text">Logoipsum</div>
+          <i class="ri-nextjs-fill logo-icon"></i>
+          <div class="logo-text">Next.js</div>
         </div>
         <!-- Duplicate for seamless loop -->
         <div class="logo-item">
-          <div class="logo-icon">💎</div>
-          <div class="logo-text">Logoipsum</div>
+          <i class="ri-html5-line logo-icon"></i>
+          <div class="logo-text">HTML5</div>
         </div>
         <div class="logo-item">
-          <div class="logo-icon">🚀</div>
-          <div class="logo-text">Logoipsum</div>
+          <i class="ri-css3-fill logo-icon"></i>
+          
+          <div class="logo-text">CSS3</div>
+        </div>
+        
+        <div class="logo-item">
+          <i class="ri-javascript-fill logo-icon"></i>
+          <div class="logo-text">JavaScript</div>
         </div>
         <div class="logo-item">
-          <div class="logo-icon">🎯</div>
-          <div class="logo-text">Logoipsum</div>
+          <i class="ri-reactjs-line logo-icon"></i>
+          <div class="logo-text">React</div>
         </div>
         <div class="logo-item">
-          <div class="logo-icon">🌟</div>
-          <div class="logo-text">Logoipsum</div>
+          <i class="ri-tailwind-css-fill logo-icon"></i>
+          <div class="logo-text">Tailwind</div>
         </div>
         <div class="logo-item">
-          <div class="logo-icon">💫</div>
-          <div class="logo-text">Logoipsum</div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-icon">🔮</div>
-          <div class="logo-text">Logoipsum</div>
+          <i class="ri-nextjs-fill logo-icon"></i>
+          <div class="logo-text">Next.js</div>
         </div>
       </div>
     </div>
 
     <!-- who am i section -->
 
-    <div class="container">
+    <section id="portfolio-grid" class="container">
       <!-- LEFT STICKY SECTION -->
       <div class="left-section">
         <div class="profile-card">
@@ -324,7 +376,7 @@
         </div>
 
         <!-- PROJECTS SECTION -->
-        <div class="projects-section">
+        <section id="projects" class="projects-section">
           <h2 class="section-title">Recent Projects</h2>
 
           <div class="project-card">
@@ -410,9 +462,39 @@
               <span class="tag">Stripe</span>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
+    </section>
+
+     <!-- Contact Me Section -->
+    <section class="contact-section" id="contact">
+      <h2>
+        Ready to take <span>your</span> digital presence to the next level?
+      </h2>
+      <p>
+        Reach out to me today and let's discuss how I can help you achieve your
+        goals.
+      </p>
+
+           <div
+              class="glowing-box glowing-box-active"
+              style="--animation-speed: 2s"
+            >
+              <div class="glowing-box-animations">
+                <div class="glowing-box-glow"></div>
+                <div class="glowing-box-stars-masker">
+                  <div class="glowing-box-stars"></div>
+                </div>
+              </div>
+              <div class="glowing-box-borders-masker">
+                <div class="glowing-box-borders"></div>
+              </div>
+              <button class="glowing-box-button" onclick="location.href='contact.html'">
+                <span class="glowing-span">Contact me</span>
+              </button>
+            </div>
+
+    </section>
 
     <!-- footer -->
     <footer class="footer">

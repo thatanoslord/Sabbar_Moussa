@@ -5,8 +5,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-image: url("../images/Contact_Form.svg");
   background-size: inherit;
   background-position: center;
@@ -54,13 +53,28 @@ header {
 }
 .logo {
   display: none;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
   z-index: 101;
   text-decoration: none;
+  padding: 4px;
 }
-.logo span {
-  background: linear-gradient(90deg, #b07aff, #c1a0ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+.nav-orb {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  pointer-events: none;
+}
+
+.nav-orb canvas {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /* burger menu */
@@ -138,6 +152,7 @@ header {
     rgba(87, 173, 199, 1) 50%,
     rgba(91, 83, 237, 1) 100%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -314,6 +329,11 @@ header {
   position: relative;
   width: 100%;
   overflow: hidden;
+  place-items: start;
+    margin: 0px;
+    padding: 10px;
+    display: flex;
+    gap: 80px;
 }
 
 .scroll-container::before,
@@ -342,11 +362,11 @@ header {
   gap: 4rem;
 }
 .scroll-right .scroll-content {
-  animation: scrollRight 20s linear infinite;
+  animation: scrollRight 40s linear infinite;
 }
 
 .scroll-left .scroll-content {
-  animation: scrollLeft 20s linear infinite;
+  animation: scrollLeft 40s linear infinite;
 }
 .scroll-container:nth-child(2) .scroll-content {
   animation: scrollLeft 30s linear infinite;
@@ -361,14 +381,10 @@ header {
 }
 
 .logo-icon {
-  width: 50px;
-  height: 50px;
-  background: #fff;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 50px;
 }
 
 .logo-text {
@@ -478,6 +494,10 @@ header {
 }
 
 .name {
+  background: linear-gradient(90deg, #a855f7 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 8px;
@@ -521,9 +541,6 @@ header {
 
 /*links buttons*/
 .Social-button {
-  margin-top: 30px;
-  padding-top: 25px;
-  border-top: 1px solid #333;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -781,6 +798,129 @@ header {
   /* border: 1px solid #333; */
 }
 
+/* CONTACT SECTION */
+
+.contact-section {
+  text-align: center;
+  padding: 20px 20px 80px;
+  background-image: url("../images/pattern.svg"),
+    /* your pattern image */
+      radial-gradient(
+        ellipse at center,
+        rgba(255, 255, 255, 0.03) 0%,
+        transparent 70%
+      );
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover; /* pattern repeats, gradient covers */
+  background-position: top left, center;
+  color: #fff;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.contact-section h2 span {
+  background: linear-gradient(90deg, #b388ff, #9f7aea);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-section p {
+  margin: 20px;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+.contact-btn {
+  margin-top: 40px;
+  padding: 16px 36px;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 20px 40px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../images/footer-bg.svg");
+  color: #ccc;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.footer-links{
+  display: flex;
+  gap: 10px;
+}
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* Social icons */
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social a {
+  color: #ccc;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #fff;
+}
+
+/* Right section */
+.footer-right {
+  text-align: right;
+  color: #aaa;
+}
+
+.footer-right p {
+  margin: 2px 0;
+}
+
+.footer-right .project-title {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
 @media (max-width: 1024px) {
   .container {
     flex-direction: column;
@@ -867,7 +1007,6 @@ header {
   }
 }
 
-
 /* nav bar Mobile Responsive */
 @media (max-width: 768px) {
   .navbar {
@@ -885,7 +1024,7 @@ header {
   }
 
   .logo {
-    display: block;
+    display: flex;
   }
 
   .burger-menu {
@@ -933,5 +1072,16 @@ header {
 @media (max-width: 768px) {
   .card.large {
     grid-column: span 1;
+  }
+}
+/* footer Responsive */
+@media (max-width: 800px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
   }
 }
