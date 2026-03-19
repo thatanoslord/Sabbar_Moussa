@@ -12,6 +12,142 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles/about.css" />
+    <script>
+      (function () {
+        const endpoint =
+          "http://127.0.0.1:7910/ingest/86779f65-cbf8-4809-b670-998dfa3ff4ef";
+        const sessionId = "68be8a";
+        const runId = "about_css_debug_" + Date.now().toString(36);
+        const links = Array.from(
+          document.querySelectorAll('link[rel="stylesheet"]')
+        );
+
+        // #region agent log: stylesheet hrefs
+        function postInitial() {
+          try {
+            fetch(endpoint, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "X-Debug-Session-Id": sessionId,
+              },
+              body: JSON.stringify({
+                sessionId,
+                runId,
+                hypothesisId: "A",
+                location: "about.html:agentLog:init",
+                message: "Stylesheet hrefs found on page",
+                data: {
+                  baseURI: document.baseURI,
+                  hrefs: links.map((l) => l.getAttribute("href")),
+                },
+                timestamp: Date.now(),
+              }),
+            }).catch(() => {});
+          } catch (_) {}
+        }
+        // #endregion
+
+        // #region agent log: stylesheet loaded
+        function postLoaded(hypothesisId, href) {
+          try {
+            fetch(endpoint, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "X-Debug-Session-Id": sessionId,
+              },
+              body: JSON.stringify({
+                sessionId,
+                runId,
+                hypothesisId,
+                location: "about.html:agentLog:loaded",
+                message: "Stylesheet loaded successfully",
+                data: { href },
+                timestamp: Date.now(),
+              }),
+            }).catch(() => {});
+          } catch (_) {}
+        }
+        // #endregion
+
+        // #region agent log: stylesheet failed
+        function postError(hypothesisId, href, baseURI) {
+          try {
+            fetch(endpoint, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "X-Debug-Session-Id": sessionId,
+              },
+              body: JSON.stringify({
+                sessionId,
+                runId,
+                hypothesisId,
+                location: "about.html:agentLog:error",
+                message: "Stylesheet failed to load (onerror)",
+                data: { href, baseURI },
+                timestamp: Date.now(),
+              }),
+            }).catch(() => {});
+          } catch (_) {}
+        }
+        // #endregion
+
+        // #region agent log: computed style after load
+        function postComputedStyle() {
+          try {
+            const cs = window.getComputedStyle(document.body);
+            fetch(endpoint, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "X-Debug-Session-Id": sessionId,
+              },
+              body: JSON.stringify({
+                sessionId,
+                runId,
+                hypothesisId: "C",
+                location: "about.html:agentLog:computedStyle",
+                message: "Computed body styles after window load",
+                data: {
+                  fontFamily: cs.fontFamily,
+                  backgroundImage: cs.backgroundImage,
+                  color: cs.color,
+                },
+                timestamp: Date.now(),
+              }),
+            }).catch(() => {});
+          } catch (_) {}
+        }
+        // #endregion
+
+        // #region agent log: attach listeners
+        links.forEach((link) => {
+          const href = link.getAttribute("href") || "";
+          // Hypothesis mapping:
+          // - A: absolute href starting with "/"
+          // - B: about.css path/availability issues
+          const hrefHypothesis =
+            href === "/styles/about.css" || href.startsWith("/styles/")
+              ? "A"
+              : href.includes("about.css")
+              ? "B"
+              : "D";
+
+          link.addEventListener("load", () => {
+            postLoaded(hrefHypothesis, href);
+          });
+          link.addEventListener("error", () => {
+            postError(hrefHypothesis, href, document.baseURI);
+          });
+        });
+
+        postInitial();
+        window.addEventListener("load", postComputedStyle);
+        // #endregion
+      })();
+    </script>
     <title>About - Moussa Sabbar</title>
   </head>
   <body id="about">
