@@ -506,6 +506,7 @@ header {
 }
 
 .flame-icon {
+  visibility: hidden;
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -834,6 +835,13 @@ header {
   font-size: 1.1rem;
   color: #ccc;
 }
+
+/* Same glowing CTA sizing as contact.html (contact.css .glowing-box width) */
+.contact-section .glowing-box {
+  width: 80%;
+  max-width: 420px;
+}
+
 .contact-btn {
   margin-top: 40px;
   padding: 16px 36px;

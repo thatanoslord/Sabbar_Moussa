@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/btn.css" />
     <script>
       (function () {
         const endpoint =
@@ -100,6 +101,7 @@
             const cs = window.getComputedStyle(document.body);
             fetch(endpoint, {
               method: "POST",
+             
               headers: {
                 "Content-Type": "application/json",
                 "X-Debug-Session-Id": sessionId,
