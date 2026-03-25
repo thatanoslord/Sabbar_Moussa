@@ -56,7 +56,10 @@ header {
   transition: all 0.3s ease;
 }
 .logo {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
   z-index: 101;
   text-decoration: none;
 }
@@ -64,6 +67,20 @@ header {
   background: linear-gradient(90deg, #b07aff, #c1a0ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.nav-orb {
+  width: 52px;
+  height: 52px;
+  position: relative;
+  pointer-events: none;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.nav-orb canvas {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /* burger menu */
