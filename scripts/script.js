@@ -8,11 +8,18 @@ ctaHover?.addEventListener("mouseleave", () => {
   document.querySelector(".arrow").style.transform = "translateX(0)";
 });
 
-// email address functionality
+// email address functionality (toast: scripts/toast.js)
 const copyBtn = document.querySelector(".copy-btn");
-copyBtn?.addEventListener("click", () => {
-  navigator.clipboard.writeText("sabbarmoussa@gmail.com");
-  alert("Email copied to clipboard!");
+copyBtn?.addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText("sabbarmoussa@gmail.com");
+    showPortfolioToast("Email copied to clipboard!");
+  } catch {
+    showPortfolioToast(
+      "Couldn’t copy automatically—try selecting the address manually.",
+      true
+    );
+  }
 });
 
 // live sites funcs

@@ -118,8 +118,11 @@ document.addEventListener("DOMContentLoaded", () => {
           document.getElementById("email").value = "";
           document.getElementById("message").value = "";
 
-          // Show success message
-          alert("Message sent successfully! I'll get back to you soon.");
+          showPortfolioToast(
+            "Message sent successfully! I'll get back to you soon.",
+            false,
+            "ri-checkbox-circle-line"
+          );
           console.log("Email sent successfully:", res.status, res.text);
 
           // Reset button
@@ -128,7 +131,10 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch((err) => {
           console.error("EmailJS error:", err);
-          alert("Failed to send message. Please try again or contact me directly at sabbarmoussa@gmail.com");
+          showPortfolioToast(
+            "Failed to send. Please try again or email sabbarmoussa@gmail.com directly.",
+            true
+          );
           
           // Reset button
           submitBtn.disabled = false;
